@@ -1,0 +1,15 @@
+########################################
+# CLOUD RESUME CHALLENGE - DEVELOPMENT LOG
+########################################
+#
+# Purpose: This is a private working document to track challenges, errors, and fixes.
+# This log will be summarized into the 'Challenges & Learnings' section of the final README.md.
+#
+# Date: Dec 2, 2025
+# Goal: Set up static hosting (S3 + CloudFront).
+#
+
+# [LOG ENTRY TEMPLATE]
+# [TIME]: [ERROR/CHALLENGE]
+# [RESOLUTION]: [What I did to fix it, and the concept it taught me]
+#
