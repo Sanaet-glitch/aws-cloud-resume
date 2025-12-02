@@ -31,3 +31,24 @@
 # Domain Name: sanaetcloud.engineer
 # Cost: $0.00
 # Status: Active
+
+# [DEC 2, 2025]: AWS INFRASTRUCTURE INITIALIZATION
+# ACTION 1: ACCOUNT SETUP
+# - Created standard AWS Free Tier account.
+# - Verified identity via phone and card.
+#
+# ACTION 2: COST SAFETY (CRITICAL)
+# - Enabled "Receive Free Tier Usage Alerts" in Billing Preferences.
+# - Created CloudWatch Billing Alarm:
+#   - Metric: EstimatedCharges
+#   - Threshold: >= $1.00 USD
+#   - Notification: Email sent to my personal address.
+#   - Status: Subscription confirmed via email.
+#
+# ACTION 3: SECURITY HARDENING (IAM)
+# - Secured Root User with Multi-Factor Authentication (MFA).
+# - Created an IAM User Group with 'AdministratorAccess' policy.
+# - Created an IAM User and added them to the IAM User group.
+#
+# STATUS:
+# Root user locked away. Logged in as the IAM User for every day activities. 
