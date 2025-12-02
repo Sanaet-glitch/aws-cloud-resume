@@ -51,4 +51,33 @@
 # - Created an IAM User and added them to the IAM User group.
 #
 # STATUS:
-# Root user locked away. Logged in as the IAM User for every day activities. 
+# Root user locked away. Logged in as the IAM User for every day activities.
+
+# [DEC 2, 2025]: S3 DEPLOYMENT (CONSOLE FALLBACK)
+# ACTION:
+# Deployed S3 bucket 'sanaetcloud.engineer' in us-east-1.
+# - Enabled Static Website Hosting.
+# - Configured Public Read Bucket Policy.
+# - Uploaded index.html.
+#
+# CHALLENGE:
+# AWS CloudShell was blocked due to "Account Verification" status (new account).
+# RESOLUTION:
+# Pivoted to using the AWS Management Console (GUI) to execute the deployment.
+#
+# VERIFICATION:
+# Website is live at the S3 endpoint URL.
+
+# [DEC 2, 2025]: SSL CERTIFICATE PROVISIONING (ACM)
+# ACTION:
+# Requested public SSL/TLS certificate via AWS Certificate Manager (ACM) in us-east-1.
+# - Domains covered: sanaetcloud.engineer, www.sanaetcloud.engineer.
+# - Validation Method: DNS Validation.
+#
+# IMPLEMENTATION:
+# Extracted CNAME records from AWS ACM.
+# Added CNAME records to Name.com DNS configuration.
+#
+# VERIFICATION:
+# Certificate status changed from 'Pending validation' to 'Issued'.
+# We now have a valid SSL certificate ready for attachment.
