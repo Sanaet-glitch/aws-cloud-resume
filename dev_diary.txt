@@ -81,3 +81,26 @@
 # VERIFICATION:
 # Certificate status changed from 'Pending validation' to 'Issued'.
 # We now have a valid SSL certificate ready for attachment.
+
+# [DEC 3, 2025]: INFRASTRUCTURE MONITORING FIX (SNS)
+# PROBLEM:
+# CloudWatch Billing Alarm subscription failed. The SNS topic showed a status of 'Confirmed' 
+# but the Subscription ID was 'Deleted' (Zombie State). Alerts were not being delivered.
+#
+# ROOT CAUSE ANALYSIS:
+# Aggressive email security scanners (or spam filters) likely 'clicked' the Unsubscribe link.
+# 
+# This automated GET request triggered an immediate unsubscription.
+#
+# RESOLUTION:
+# 1. Deleted the corrupted 'Zombie' subscription.
+# 2. Created a new email subscription.
+# 3. Performed MANUAL CONFIRMATION: Copied the confirmation URL from the email header 
+#    and pasted it directly into the AWS Console.
+#
+# TECHNICAL LESSON:
+# Manual confirmation prevents the email client/scanner from executing the URL, ensuring 
+# the link is only processed exactly once by the intended administrator.
+#
+# STATUS:
+# SNS Topic is now healthy and verified active.
